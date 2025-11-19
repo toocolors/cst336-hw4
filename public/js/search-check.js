@@ -1,5 +1,5 @@
 // Global Variables
-let validChars = 'abcdefghijklmnopqrstuvwxyz 123456789ABCDEFJHIJKLMNOPQRSTUVWXYZ';
+let validChars = 'abcdefghijklmnopqrstuvwxyz 0123456789ABCDEFJHIJKLMNOPQRSTUVWXYZ';
 
 // Event Listeners
 /**
