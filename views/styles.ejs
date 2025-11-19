@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include('partials/head.ejs') %>
+<body class="text-center">
+    <h1>Pick a Style!</h1>
+    <!-- Nav -->
+    <%- include('partials/nav.ejs') %>
+
+    <main class="bg-white">
+
+        <p>
+            As you can see, this page already has a font displayed!<br>
+            You use the dropdown to select different font styles to apply.
+            The available styles are bold, italic, and bold italic.
+            Do you know what each one does?
+        </p>
+
+        <%- include('partials/style-select.ejs') %>
+        
+        <%- include('partials/submit.ejs') %>
+
+        Once you are done looking at all of the styles,<br>
+        feel free to visit one of the other pages!
+    </main>
+    
+    <!-- Footer -->
+    <%- include('partials/footer.ejs') %>
+
+    <script src="../js/style-script.js"></script>
+</body>
+</html>

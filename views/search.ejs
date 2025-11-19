@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include('partials/head.ejs') %>
+<body>
+    <h1>Enter a Font!</h1>
+    <!-- Nav -->
+    <%- include('partials/nav.ejs') %>
+
+    <main class="bg-white">
+        <p class="text-left">
+            Have you had enough of the fonts offered on the 
+            <a href="/font">Fonts</a> page?
+            On this page you can type in the name of a font to display.
+            This website supports all 
+            fonts from <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>.
+            After you enter a font, a dropdown menu for font styles will appear.<br>
+        </p>
+        
+        <p class="disclaimer">
+            Note: Fonts must contain only letters and spaces.
+            If you enter a font that doesn't exist, the default font will be displayed.
+        </p>
+
+        <form id="form" action="/submit-search">
+            <input id="font1" type="text" name="font">
+            <input type="submit" value="Submit">
+        </form>
+        <span id="formError" class="hidden text-danger"></span>
+
+        <br>
+
+        <%- include('partials/style-select.ejs') %>
+        
+        <%- include('partials/submit.ejs') %>
+
+        <br>
+
+    </main>
+    
+    <!-- Footer -->
+    <%- include('partials/footer.ejs') %>
+
+    <script src="../js/style-script.js"></script>
+    <script src="../js/search-check.js"></script>
+</body>
+</html>

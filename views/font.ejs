@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include('partials/head.ejs') %>
+<body class="text-center">
+    <h1>Pick a Font!</h1>
+    <!-- Nav -->
+    <%- include('partials/nav.ejs') %>
+
+    <main class="bg-white">
+        <p>
+            Please use the drop down below to select a font,
+            then click submit to see an example of the font!
+            <br><br>
+            If this page doesn't offer enought fonts for you, don't worry!
+            Some of the other pages will allow access to many more fonts!
+        </p>
+
+        <form action="/submit-font">
+            <select name="font">
+                <option value="">Select One</option>
+                <option value="TikTok-Sans">TikTok Sans</option>
+                <option value="Imperial-Script">Imperial Script</option>
+                <option value="Comic-Relief">Comic Relief</option>
+                <option value="Doto">Doto</option>
+                <option value="Coral-Pixels">Coral Pixels</option>
+            </select>
+            <input type="submit" value="Submit">
+        </form>
+
+        <%- include('partials/submit.ejs') %>
+
+        How interesting!<br>
+        <p class="<%= displayClass %>">
+            If you would like to see another font, 
+            you can select another from the drop down.
+            If you are done with these fonts, check out on of the other pages
+            to see more!
+        </p>
+        
+    </main>
+    
+    <!-- Footer -->
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

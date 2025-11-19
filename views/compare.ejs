@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include('partials/compare-head.ejs') %>
+<body class="text-center">
+    <h1>Compare two Fonts!</h1>
+    <!-- Nav -->
+    <%- include('partials/nav.ejs') %>
+
+    <main class="bg-white">
+        <p>
+            Is one font not enough?
+            This page will allow you to search two fonts and display them side by side,
+            in case you want to compare two fonts or font styles.
+            This website supports all 
+            fonts from <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>.
+            After you enter submit the fonts, dropdown menus for font styles will appear.<br>
+        </p>
+
+        <p class="disclaimer">
+            Note: Fonts must contain only letters and spaces.
+            If you enter a font that doesn't exist, the default font will be displayed.
+        </p>
+
+        <form id="form" action="/submit-compare">
+            <input id="font1" type="text" name="font1">
+            <input id="font2" type="text" name="font2">
+            <input type="submit" value="Submit">
+        </form>
+        <span id="formError" class="hidden text-danger"></span>
+
+        <br>
+
+        <div class="flex">
+            <div>
+                <%- include('partials/style-select.ejs') %>
+                <%- include('partials/submit.ejs') %>
+            </div>
+
+            <div>
+                <%- include('partials/style-select2.ejs') %>
+                <%- include('partials/submit2.ejs') %>
+            </div>
+        </div>
+
+    </main>
+    
+    <!-- Footer -->
+    <%- include('partials/footer.ejs') %>
+
+    <script src="../js/compare-style-script.js"></script>
+    <script src="../js/search-check.js"></script>
+</body>
+</html>
